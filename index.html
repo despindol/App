@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Esto hace que se vea bien en el celular (sin zoom raro) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Estas 2 líneas hacen que en iPhone, al "Agregar a pantalla de inicio", se abra como app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Mi Coach</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Coach</h1>
+    <p class="sub">Meta: 90 kg en banca</p>
+  </header>
+
+  <main>
+    <!-- FORMULARIO: aquí capturas una serie -->
+    <section class="card">
+      <h2>Registrar serie</h2>
+      <form id="form-serie">
+        <label>
+          Ejercicio
+          <select id="ejercicio">
+            <option>Press banca</option>
+            <option>Sentadilla</option>
+            <option>Peso muerto</option>
+          </select>
+        </label>
+        <div class="fila">
+          <label>
+            Peso (kg)
+            <input id="peso" type="number" inputmode="decimal" step="0.5" required>
+          </label>
+          <label>
+            Reps
+            <input id="reps" type="number" inputmode="numeric" required>
+          </label>
+        </div>
+        <button type="submit">Guardar serie</button>
+      </form>
+    </section>
+
+    <!-- LISTA: aquí se muestran las series de hoy -->
+    <section class="card">
+      <h2>Series de hoy</h2>
+      <ul id="lista-series">
+        <!-- app.js va a meter aquí un <li> por cada serie -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

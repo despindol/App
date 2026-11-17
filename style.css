@@ -1,0 +1,74 @@
+/* Colores en un solo lugar: si quieres cambiar el look, cambias aquí */
+:root {
+  --fondo: #0f1115;
+  --tarjeta: #1a1d24;
+  --texto: #e8eaed;
+  --tenue: #8a9099;
+  --acento: #4f9cf9;
+  --borde: #2a2e37;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top) 16px 32px; /* respeta el notch del iPhone */
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+header { padding: 16px 0 8px; }
+h1 { margin: 0; font-size: 1.6rem; }
+h2 { margin: 0 0 12px; font-size: 1.1rem; }
+.sub { margin: 4px 0 0; color: var(--tenue); }
+
+.card {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+label {
+  display: block;
+  color: var(--tenue);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px;
+  font-size: 1.1rem; /* 16px+ evita que iPhone haga zoom al tocar el input */
+  color: var(--texto);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+
+.fila { display: flex; gap: 12px; }
+.fila label { flex: 1; }
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  background: var(--acento);
+  border: none;
+  border-radius: 10px;
+}
+
+#lista-series { list-style: none; padding: 0; margin: 0; }
+#lista-series li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+}
+#lista-series li:last-child { border-bottom: none; }
